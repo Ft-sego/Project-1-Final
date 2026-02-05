@@ -34,5 +34,30 @@ body {
   border-radius: 6px;
   text-align: center;
 }
+/* FORCE TEXT VISIBILITY */
+.letter-text {
+  position: relative;
+  z-index: 9999;
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ENSURE IMAGE DOES NOT COVER TEXT */
+.envelope {
+  position: relative;
+  z-index: 1;
+}
+
+/* ENSURE CONTAINER ALLOWS CONTENT */
+.container {
+  overflow: visible !important;
+}
 
 

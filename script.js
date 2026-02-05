@@ -3,10 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("envelopeContainer");
   const app = document.getElementById("valentineApp");
 
-  if (!envelope) {
-    console.error("Envelope not found");
-    return;
-  }
+  if (!envelope) return;
 
   envelope.addEventListener("click", () => {
     container.style.display = "none";

@@ -1,12 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const envelope = document.getElementById("envelope");
+const envelope = document.getElementById("envelope");
 
-  if (!envelope) {
-    console.error("Envelope image not found");
-    return;
-  }
+envelope.addEventListener("click", () => {
+  envelope.classList.add("open");
 
-  envelope.addEventListener("click", () => {
+  // wait for animation, then redirect
+  setTimeout(() => {
     window.location.href = "original_site/index.html";
-  });
+  }, 1200);
 });

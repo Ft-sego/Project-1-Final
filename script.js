@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!envelope) return;
 
   envelope.addEventListener("click", () => {
-    window.location.href = "original_site/";
+    window.location.href = "original_site/index.html";
   });
 });

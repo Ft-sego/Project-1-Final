@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Envelope Screen -->
-    <div id="envelope-container">
+    <div class="container" id="envelopeContainer">
       <img src="envelope.png" alt="Envelope" id="envelope" />
       <p>♡ Letter for You ♡</p>
     </div>
@@ -28,10 +28,10 @@
 
         <img src="cat_heart.gif" class="cat" id="letter-cat" />
 
-        <div class="buttons" id="letter-buttons">
+        <div class="envelope" id="envelope">
           <img src="yes.png" class="btn yes-btn" alt="Yes" />
 
-          <div class="no-wrapper">
+          <div class="container" id="envelopeContainer">
             <img src="no.png" class="btn no-btn" alt="No" />
           </div>
         </div>
@@ -42,5 +42,13 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <div id="valentineApp" style="display:none; width:100vw; height:100vh;">
+  <iframe
+    src="original_site/index.html"
+    style="width:100%; height:100%; border:none;"
+    allow="autoplay"
+  ></iframe>
+</div>
+
   </body>
 </html>

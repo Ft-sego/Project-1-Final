@@ -1,0 +1,30 @@
+/* FORCE CLICKABILITY */
+#envelopeContainer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+#envelope {
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* DISABLE INTERACTION WITH DECORATIVE PARTS */
+.envelope * {
+  pointer-events: none;
+}
+
+/* IFRAME HIDDEN INITIALLY */
+#valentineApp {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+#valentineApp iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

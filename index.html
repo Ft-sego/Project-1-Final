@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter for You 💖💘</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100%;
+      background: url('heart-bg.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    .envelope {
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .envelope:hover {
+      transform: scale(1.1);
+    }
+    .letter-text {
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: float 4s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-600px) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <img src="envelope.png" alt="Envelope" class="envelope" id="envelope">
+  <div class="letter-text">Letter for you 💖💘</div>
+  <div id="hearts-container"></div>
+
+  <script>
+    // Redirect to the original site
+    document.getElementById('envelope').addEventListener('click', () => {
+      window.location.href = 'original_site/index.html';
+    });
+
+    // Floating hearts animation
+    const heartsContainer = document.getElementById('hearts-container');
+    const emojis = ['💖','💘','💝','💕'];
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>

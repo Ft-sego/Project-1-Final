@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const envelope = document.getElementById("envelope");
-  const envelopeContainer = document.getElementById("envelopeContainer");
+  const container = document.getElementById("envelopeContainer");
   const app = document.getElementById("valentineApp");
 
   if (!envelope) {
@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   envelope.addEventListener("click", () => {
-    console.log("Envelope clicked");
-
-    envelopeContainer.style.display = "none";
+    container.style.display = "none";
     app.style.display = "block";
   });
 });
